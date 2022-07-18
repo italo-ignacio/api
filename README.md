@@ -1,3 +1,4 @@
+Post http://localhost:8080/animal
 ```bash
 {
 	"name":"",
@@ -11,11 +12,20 @@
 	}
 }
 ```
+Post http://localhost:8080/client
 ```bash
 {
-    "name":"1",
-    "email":"1@12",
-    "tel":"1",
-    "age":"1"
+	"name":"",
+	"email":"",
+	"tel":"",
+	"age":""
+}
+```
+http://localhost:8080/service
+```bash
+{
+	"name":"",
+	"description":"",
+	"time":"" 
 }
 ```

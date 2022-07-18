@@ -23,10 +23,6 @@ public class ServiceModel {
     @Column(nullable = false)
     private float price;
 
-    @OneToOne(mappedBy = "service", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private ScheduleModel schedule;
 
     public Long getId() {
         return id;
@@ -68,11 +64,4 @@ public class ServiceModel {
         this.price = price;
     }
 
-    public ScheduleModel getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(ScheduleModel schedule) {
-        this.schedule = schedule;
-    }
 }

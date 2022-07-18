@@ -27,10 +27,11 @@ public class ScheduleController {
         Map<String, String> response = new HashMap<>();
         var scheduleModel = new ScheduleModel();
         BeanUtils.copyProperties(scheduleDto,scheduleModel);
+
         try{
             scheduleService.save(scheduleModel);
             response.put("message", "Schedule created successfully");
-            return ResponseEntity.status(HttpStatus.CREATED).body(response);
+            return ResponseEntity.status(HttpStatus.CREATED).body(scheduleDto);
         }catch (Exception e){
             response.put("ERROR", "TRUE");
             response.put("message", "Could not created schedule");

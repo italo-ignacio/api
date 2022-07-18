@@ -18,11 +18,27 @@ public class ScheduleModel {
     @Column(nullable = false)
     private boolean concluded;
 
-    @OneToOne
-    @MapsId
-    @JoinColumn(name = "service_id")
-    private ServiceModel service;
 
+    @OneToOne(cascade=CascadeType.ALL)
+    private ServiceModel serviceModel;
+    @OneToOne(cascade=CascadeType.ALL)
+    private AnimalModel animalModel;
+
+    public ServiceModel getServiceModel() {
+        return serviceModel;
+    }
+
+    public void setServiceModel(ServiceModel serviceModel) {
+        this.serviceModel = serviceModel;
+    }
+
+    public AnimalModel getAnimalModel() {
+        return animalModel;
+    }
+
+    public void setAnimalModel(AnimalModel animalModel) {
+        this.animalModel = animalModel;
+    }
 
     public Long getId() {
         return id;
@@ -56,13 +72,7 @@ public class ScheduleModel {
         this.concluded = concluded;
     }
 
-    public ServiceModel getService() {
-        return service;
-    }
 
-    public void setService(ServiceModel service) {
-        this.service = service;
-    }
 
 
 }

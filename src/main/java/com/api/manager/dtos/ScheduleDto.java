@@ -15,7 +15,8 @@ public class ScheduleDto {
     private boolean concluded;
     @NotNull(message = "service:id can not be be null ")
     private ServiceModel service;
-
+    @NotNull(message = "animal:id can not be be null ")
+    private AnimalModel animal;
 
     public String getDate() {
         return date;
@@ -49,5 +50,11 @@ public class ScheduleDto {
         this.service = service;
     }
 
+    public AnimalModel getAnimal() {
+        return animal;
+    }
 
+    public void setAnimal(AnimalModel animal) {
+        this.animal = animal;
+    }
 }

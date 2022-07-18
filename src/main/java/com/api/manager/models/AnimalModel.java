@@ -29,7 +29,6 @@ public class AnimalModel {
 
 
 
-
     public Long getId() {
         return id;
     }
