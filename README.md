@@ -1,3 +1,5 @@
+# Colocar a senha e o user do mysql no application.properties
+## Criar o banco de dados com o nome "manager"
 Post http://localhost:8080/animal
 ```bash
 {
